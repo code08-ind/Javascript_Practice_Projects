@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>score selector game</title>
+    <style>
+        p span{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <h1>Score Keeper Game</h1>
+   <p><span id="one">0</span> To <span id="two">0</span></p>
+   <br>
+   <input type="text" name="text" id="text1">
+   <label id="label1" style="color:green ; visibility: hidden;">Player 1 Won.</label>
+   <label id="label2" style="color:blue ; visibility: hidden;">Player 2 Won.</label>
+   <label id="label3" style="color:red ; visibility: hidden;">Not Possible!!! . Please Reset The Game.</label>
+   <br>
+   <br>
+   <p id="para">Playing Up To Points :</p>
+   <button id="btn1" onclick="btn1()">Player 1</button>
+   <button id="btn2" onclick="btn2()">Player 2</button>
+   <button id="btn3" onclick="btn3()">Reset</button>
+   <button id="btn4" onclick="btn4()">Update</button>
+</body>
+<script>
+     var one = 0;
+     var two = 0;
+     var intervalId = 0;
+     function btn4(){
+     document.getElementById("para").textContent = "Playing Up To Points :" + str.value;
+     }
+     function btn1(){
+         one++;
+         document.getElementById("one").textContent = one;
+         if(one==str.value){
+             clearInterval(intervalId);
+             document.getElementById("one").style.color = "green";
+             document.getElementById("label1").style.visibility = "visible";
+         }
+         if(one > str.value){
+             document.getElementById("one").textContent = str.value;
+         }
+     }
+     function btn2(){
+         two++;
+         document.getElementById("two").textContent = two;
+         if(two==str.value){
+             clearInterval(intervalId);
+             document.getElementById("two").style.color = "green";
+             document.getElementById("label2").style.visibility = "visible";
+         }
+         if(two > str.value){
+             document.getElementById("two").textContent = str.value;
+         }
+     }
+     function btn3(){
+         document.getElementById("one").textContent = 0;
+         document.getElementById("two").textContent = 0;
+         document.getElementById("one").style.color = "black";
+         document.getElementById("two").style.color = "black";
+     }
+     
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events and effects </title>
+    <style>
+        div#firstdiv{
+            border:2px solid blue;
+            width:50%;
+            margin-bottom: 2rem;
+        }
+        div#seconddiv{
+            border:2px solid blue;
+            width:50%;
+            margin-bottom: 2rem;
+        }
+        p#para{
+            position: absolute;
+            height:50px;
+            width:50px;
+            padding: 20px;
+            background-color: blueviolet;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Everyone!</h1>
+    <p>Be safe at home inside the college and home</p>
+    <div id="firstdiv">
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ul>
+    </div>
+    <div id="seconddiv">
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ul>
+    </div>
+    <button id="btn1">button1</button>
+    <button id="btn2">button2</button>
+    <button id="btn3">Animate</button>
+    <p id="para">Cube</p>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+       $(document).ready(function(){
+            $("#btn1").click(fn1);
+            function fn1(){
+                $("#firstdiv").slideUp(2000,function(){
+                    alert("animation done");
+                });
+            }
+            // $("#btn2").click(fn2);
+            // function fn2(){
+            //     $("#firstdiv").slideDown(1000);
+            // }
+            // $("#btn2").hover(fn3);
+            // function fn3(){
+            //     $("#firstdiv").slideToggle(100);
+            // }
+            // $("#btn3").click(function(){
+            //     $("#para").animate({
+            //         height:'100px',
+            //         width:'100px',
+            //         opacity:'1',
+            //         left:'150px',
+            //         padding:'80px',
+            //     })
+            // });
+       });
+</script>
+</html>

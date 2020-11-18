@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltip</title>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.theme.css">
+    <style>
+       div.mydiv{
+           border: 2px solid purple;
+           padding:20px;
+       }
+    </style>
+</head>
+<body>
+    <div class="mydiv">
+        <h1>Tooltip</h1>
+        <img src="me.jpg" width="200px" id="myimg" title="" alt="me">
+    </div>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script>
+    $("img").tooltip({
+        // track:true,
+        content:"i am aryan me",
+        show:{effect:"pulsate",
+              duration:2000, 
+               },
+        hide:{effect:"explode",
+              duration:2000, 
+               }
+    });
+</script>
+</html>

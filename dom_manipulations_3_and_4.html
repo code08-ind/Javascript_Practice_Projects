@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulations 3&4</title>
+    <style>
+        div.div1{
+            padding: 4px;
+            margin: 3px;
+            border:2px solid blue;
+        }
+        .newdivclass{
+            border-radius: 10px;
+            background-color: cyan;
+        }
+        .newparaclass{
+            color: red;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>dom manipulations by jquery 3 and 4 part</h1>
+    <!-- <button id="btn1">append</button>
+    <button id="btn2">prepend</button>
+    <button id="btn3">before</button>
+    <button id="btn4">after</button>
+    <br><br>
+    <button id="btn5">remove</button>
+    <button id="btn6">empty</button> -->
+
+    <button id="btn1">AddClass</button>
+    <button id="btn2">RemoveClass</button>
+    <button id="btn3">ToggleClass</button>
+    <button id="btn4">CSS</button>
+
+    <div class="div1" id="division">
+        <p id="p1" class="para1">This is <b>first</b> paragraph in <i>first</i> division.</p>
+        <p id="p2" class="para2">This is <b>third</b> paragraph in <i>first</i> division.</p>
+    </div>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        // $("#btn1").click(function(){
+        //      $("#division").append("<p>This is <b>second</b> paragraph in <i>first</i> division.</p>");
+        // });
+        // $("#btn2").click(function(){
+        //      $("#division").prepend("<p>This is <b>second</b> paragraph in <i>first</i> division.</p>");
+        // });
+        // $("#btn3").click(function(){
+        //      $("#division").before("<p>This is <b>second</b> paragraph in <i>first</i> division.</p>");
+        // });
+        // $("#btn4").click(function(){
+        //      $("#division").after("<p>This is <b>second</b> paragraph in <i>first</i> division.</p>");
+        // });
+        // $("#btn5").click(function(){
+        //      $("p").remove("#p2 , #p1 ");
+        // });
+        // $("#btn6").click(function(){
+        //      $("#division").empty();
+        // });
+        $("#btn1").click(function(){
+             $("#division").addClass("newdivclass newparaclass");
+        });
+        $("#btn2").click(function(){
+             $("#division").removeClass("newdivclass");
+        });
+        $("#btn3").click(function(){
+             $("#division").toggleClass("newdivclass");
+        });
+        $("#btn4").click(function(){
+            $("#division").css("font-family","cursive");
+            alert($("#division").css("font-size"));
+        });
+    });
+
+</script>
+</html>

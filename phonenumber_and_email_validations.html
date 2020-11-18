@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone number and email validations</title>
+    <script>
+       function validate(){
+           var text = document.getElementById("text1").value;
+           var regx = /^([a-z A-Z 0-9\.-]+)@([a-z A-Z 0-9 -]+).([a-z]{2,20})(.[a-z]{2,10}?)$/ //? ponits towards the last part optional as it is the extension and round brackets are used for taking out the grops further could be searched on regex101.com
+           //var regx=/^[5-9]\d{9}$/;//phone number validations
+           if(regx.test(text)){
+               document.getElementById("lbl").innerHTML="Valid";
+               document.getElementById("lbl").style.visibility="visible";
+               document.getElementById("lbl").style.color="green";
+           }
+           else{
+            document.getElementById("lbl").innerHTML="InValid";
+               document.getElementById("lbl").style.visibility="visible";
+               document.getElementById("lbl").style.color="red";
+           }
+       }
+    </script>
+</head>
+<body>
+      <form>
+        <input type="text" id="text1" 
+        placeholder="email"><!--placeholder="phone number"-->
+        <br>
+        <label id="lbl" style="color:red;visibility:hidden">Invalid</label>
+        <br><br>
+        <button id="btn1" type="button" onclick="validate()">Submit</button>
+    </form>
+</body>
+</html>

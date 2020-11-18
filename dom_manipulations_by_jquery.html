@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom manipulations by jquery</title>
+    <style>
+        p#p1{
+            color:cyan;
+            border:2px solid blue;
+            width:10%;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>jquery dom manipulations</h1>
+    <button id="btn1">set value</button>
+    <button id="btn2">get value</button>
+
+    <br>
+    <p id="p1" class="para">This is new <b>para</b>.</p>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn1").mouseenter(function(){
+
+           $("#p1").attr("class","para12");
+
+        });
+        $("#btn2").mouseenter(function(){
+
+           alert($("#p1").attr("class"));
+
+        });
+
+    });
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message box</title>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.theme.css">
+    <style>
+        div{
+            border:2px solid purple;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>message box in jquery ui</h2>
+    <div id="firstdiv" class="mydivs">
+        <h3>hello everyone</h3>
+        <br>
+        <button id="btn1">click</button>
+    </div>
+    <br>
+    <div id="messagebox" title="messagebox" class="messagebox">
+        <h3>hello every all one</h3>
+        <img src="me.jpg" alt="me" width="200px">
+        <br>
+        <button id="btn2">click me</button>
+    </div>
+    <br>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script>
+     $("#btn1").click(function(){
+         $("#messagebox").dialog({
+             draggable:true,
+             resizable:false,
+             title:"aryantextbox",
+             modal:true,
+             buttons:[
+                 {
+                    text:'close',
+                    icon:'ui-icon-heart',
+                    click:function(){
+                        $(this).dialog("close");
+                }
+                 },
+                {
+                    text:'opens',
+                    icon:'ui-icon-heart',
+                    click:function(){
+                        $(this).dialog("close");
+                }
+                }
+             ]
+         });
+     });
+</script>
+</html>

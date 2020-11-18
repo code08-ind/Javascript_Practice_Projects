@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods in javascript</title>
+    <script>
+        function setNewImage(){
+            document.getElementById("img1").src="back.jpg";
+        
+        }
+        function setOldImage(){
+            document.getElementById("img1").src="me.jpg";
+        }
+        // function fn1() {
+        //     var para=document.getElementsByClassName("para1");
+        //     para[0].style.fontStyle="italic";
+        //     para[1].style.color="blue";
+        //     para[2].style.backgroundColor="green";
+            
+        // }
+    </script>
+</head>
+<body>
+    <img src="me.jpg" alt="me" id="img1" width="100" onmouseover="setNewImage()" onmouseout="setOldImage()">
+    <!-- <p class="para1">This is paragraph 1</p>
+    <p class="para1">This is paragraph 2</p>
+    <p class="para1">This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+    <p>This is paragraph 5</p>
+    <button id="btn1" onclick="fn1()">Click Me</button> -->
+</body>
+</html>

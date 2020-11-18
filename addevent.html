@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addevent methods</title>
+</head>
+<style>
+.list{
+      text-decoration: line-through;
+      opacity:0.5;
+}
+</style>
+
+<body>
+    <ul>
+        <li>cat</li>
+        <li>dog</li>
+        <li>meat</li>
+    </ul>
+</body>
+<script>
+    var lis = document.querySelectorAll("li");
+    // firstLi.addEventListener("mouseover",function(){
+    //       firstLi.style.color = "green";
+    // });
+    // firstLi.addEventListener("mouseout",function(){
+    //       firstLi.style.color = "black";
+    // });
+    for (var i=0;i<lis.length;i++){
+        lis[i].addEventListener("click",function(){
+          this.style.color = "green";
+          this.classList.toggle("list");
+       
+    });
+    }
+</script>
+</html>

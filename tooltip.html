@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>ToolTip</title>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.theme.css">
+</head>
+<body>
+    <div id="panels">
+        <h1>Tooltip1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, aperiam?</p>
+
+        <h1>Tooltip2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error soluta illum tempora consectetur, maiores quo.</p>
+
+        <h1>Tooltip3</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, est et quidem sit harum sapiente quibusdam dicta natus fugit exercitationem.</p>
+
+        <h1>Tooltip4</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia saepe fugiat quibusdam aut recusandae, quaerat iusto quidem sunt. Mollitia cupiditate suscipit animi rerum consequatur. Maxime?</p>
+    </div>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script>
+    $("#panels").accordion({
+        collapsible:true,
+        event:"click",
+        heightStyle:true,
+        animate:500,
+        active:2,
+        icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+    });
+</script>
+</html>

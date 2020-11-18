@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Interaction </title>
+   <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+   <link rel="stylesheet" type="text/css" href="jquery-ui.structure.css">
+   <link rel="stylesheet" type="text/css" href="jquery-ui.theme.css">
+   <style>
+      div.main{
+          border:2px solid red;
+      }
+      div.main div.cube{
+          color:purple;
+          background-color: cyan;
+          height:100px;
+          width:100px;
+          padding:50px;
+        
+          border: 2px solid purple;
+      }
+   </style>
+</head>
+<body>
+    <div class="main">
+        <h1>draggable</h1>
+        <div class="cube">
+            <h5>cube 1</h5>
+        </div>
+        <br>
+        <div class="cube">
+            <h5>cube 2</h5>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script>
+    $(".cube").draggable({
+        // axis:"x",
+        // axis:"y",//now only y axis movement occurs because it is written after previous property.
+        containment:"parent",
+        snap:true,
+        // grid:[300,300],
+      
+        cursor:"grabbing",
+        opacity:0.5,
+    });
+</script>
+</html>

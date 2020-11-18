@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizable Interaction</title>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.theme.css">
+    <style>
+        /* div#mydivs{
+            border:2px solid red;
+        } */
+    </style>
+</head>
+<body>
+    <h4>Resizable Interaction</h4>
+    <div id="mydivs">
+        <img src="me.jpg" alt="me picture" width="300px" id="pics">
+    </div>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script>
+    $("#pics").resizable({
+       maxHeight:600,
+       maxWidth:600,
+       autoHide:true,
+       ghost:true,
+       aspectRatio:false,
+    //    distance:200,
+    });
+</script>
+</html>

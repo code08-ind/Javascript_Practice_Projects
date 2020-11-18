@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fn1(){
+            // document.getElementById("heading2").innerHTML="Akshat Joshi";//of changing elkement of internal html
+            // var rd1=document.getElementById("rd1");
+            // var rd2=document.getElementById("rd2");
+            // if(rd1.checked==true){
+            //     alert("First option : "+rd1.value+" is checked.");
+            // }
+            // else if(rd2.checked==true){
+            //     alert("Second option : "+rd2.value+" is checked.");
+            // }
+            // else{
+            //     alert("No option is selected.");//radio buttons inclusion
+            // }
+            var select=document.getElementById("selectbox");
+            alert(select.options[select.selectedIndex].value);//here the selected option's value will be printed in the alert box 
+        }
+    </script>
+</head>
+<body>
+    <!-- <h2 id="heading2">Aryan Garg</h2>
+    <button onclick="fn1()" class="btn1">Click Me</button> -->
+    <!-- <input type="radio" id="rd1" name="gr1" value="Aryan Garg">Aryan Garg
+    <br>
+    <input type="radio" id="rd2" name="gr1" value="Akshat Joshi">Akshat Joshi
+    <br>
+    <button onclick="fn1()" id="btn1">Submit</button> -->
+    <select id="selectbox">
+        <option value="Aryan Garg">Aryan Garg</option>
+        <option value="Akshat Joshi">Akshat Joshi</option>
+        <option value="Akshit Duggal">Akshit Duggal</option>
+    </select>
+    <br>
+        <button onclick="fn1()" id="btn1">Submit</button>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable</title>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.theme.css">
+    <style>
+        #mydivs{
+            border: 2px solid purple;
+            padding:10px;
+        }
+        .cube{
+            height: 100px;
+            width:100px;
+            padding: 20px;
+            margin: 20px;
+            color:purple;
+            background-color: cyan;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydivs">
+        <h4>sortable interaction</h4>
+        <div class="cube">
+            cube1
+        </div>
+        <div class="cube">
+            cube2
+        </div>
+        <div class="cube">
+            cube3
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script>
+    $("#mydivs").sortable({
+        delay:300,
+        opacity:0.5,
+        distance:50,
+        containment:"parent",
+        cursor:"grabbing,"
+    })
+</script>
+</html>

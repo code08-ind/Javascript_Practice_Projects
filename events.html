@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <script src="index.js" type="text/javascript"></script>
+    <!-- <script>
+var widt = 100;
+var difference = 2;
+var intervalId = 0;
+function expand(){
+    clearInterval(intervalId);
+    intervalId = setInterval(big,20);//function and time are set as arguments in the function
+}
+fwqqvvunction big(){
+    if (widt<200){
+        widt = widt+difference;
+        document.getElementById("img1").style.width=widt;
+    }
+    else{
+        clearInterval(intervalId);
+    }
+}
+function contract(){
+    clearInterval(intervalId);
+    intervalId = setInterval(small,20);//function and time are set as arguments in the function
+}
+function small(){
+    if (widt>100){
+        widt = widt-difference;
+        document.getElementById("img1").style.width=widt;
+    }
+    else{
+        clearInterval(intervalId);
+    }
+}
+</script> -->
+<!-- //         var button = document.querySelector("button");
+//         var isPurple = false;//first the background color is white
+       
+//         button.addEventListener("click",function(){
+//         if (isPurple){
+//             document.body.style.backgroundColor = "white";// background color changes to purple from white
+//             isPurple = false;
+//         }
+//         else{
+//             document.body.style.backgroundColor = "purple";// background color changes from purple to white
+//             isPurple = true;
+//         }
+// });
+//alert("connected"); -->
+<script>
+    var opacity=0;
+    var intervalID=0;
+    function fadeOut(){
+        intervalID = setInterval(hide,100);
+    }
+    function fadeIn(){
+        intervalID = setInterval(show,100);
+    }
+    function show(){
+      var img = document.getElementById("img1");
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if(opacity<1){
+            opacity=opacity+0.1;
+            console.log(opacity);
+            img.style.opacity=opacity;
+        }
+        else{
+            clearInterval(intervalID);
+        }
+    }
+    function hide(){
+       var img = document.getElementById("img1");
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if(opacity>0){
+            opacity=opacity-0.1;
+            console.log(opacity);
+            img.style.opacity=opacity;
+        }
+        else{
+            clearInterval(intervalID);
+        }
+    }
+    
+</script>
+   
+</head>
+<body>
+    <!-- of events of udemy -->
+    <!-- <p>hello everyone</p>
+    <button>Click Me!</button> -->
+    <br><br>
+    <button onclick="fadeIn()" id="btn1">Fade In</button>
+    <br>
+    <br>
+    <img src="color.jpg" alt="me poster" id="img1" width="100">
+    <br><br>
+    <button onclick="fadeOut()" id="btn2">Fade Out</button>
+</body>
+</html>
